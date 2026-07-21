@@ -431,7 +431,7 @@ export function QcNavbar() {
         <div className="hidden md:flex items-center gap-3">
           <Link
             to="/contact"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm bg-accent-blue text-white hover:opacity-90 transition font-semibold shadow-lg shadow-accent-blue/20"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs bg-accent-blue text-white hover:opacity-90 transition font-semibold shadow-lg shadow-accent-blue/20"
           >
             Connect with us
           </Link>

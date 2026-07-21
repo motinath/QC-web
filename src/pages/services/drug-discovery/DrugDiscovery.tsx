@@ -745,7 +745,7 @@ export function ValueRealization({ isDark }: { isDark: boolean }) {
     <div className="w-full">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         {/* Left Column: DNA Helix Interactivity */}
-        <div className="lg:col-span-6 relative flex flex-col justify-between border rounded-3xl p-6 md:p-8 overflow-hidden bg-bg-raised/40 border-border-subtle/50 backdrop-blur">
+        <div className="lg:col-span-6 relative flex flex-col justify-between border rounded-2xl p-5 md:p-6 overflow-hidden bg-bg-raised/40 border-border-subtle/50 backdrop-blur">
           {/* Subtle grid pattern overlay */}
           <div
             className="absolute inset-0 opacity-[0.02] pointer-events-none"
@@ -845,14 +845,14 @@ export function ValueRealization({ isDark }: { isDark: boolean }) {
           {/* Card 1: Investors */}
           <div className="relative group flex-1">
             <div
-              className={`absolute -bottom-2 -right-2 h-full w-full rounded-3xl -z-10 transition-all ${
+              className={`absolute -bottom-2 -right-2 h-full w-full rounded-2xl -z-10 transition-all ${
                 isDark
                   ? "bg-[#181a1d] border border-border-subtle"
                   : "bg-[#f4f0e6] border border-slate-200"
               }`}
             />
             <div
-              className={`h-full border rounded-3xl p-6 md:p-8 flex flex-col justify-between backdrop-blur transition-all duration-300 group-hover:-translate-y-0.5 ${
+              className={`h-full border rounded-2xl p-5 md:p-6 flex flex-col justify-between backdrop-blur transition-all duration-300 group-hover:-translate-y-0.5 ${
                 isDark
                   ? "border-border-subtle bg-bg-raised/40 hover:border-zinc-700"
                   : "border-slate-200 bg-white shadow-md shadow-slate-100/50 hover:border-slate-350"
@@ -882,14 +882,14 @@ export function ValueRealization({ isDark }: { isDark: boolean }) {
           {/* Card 2: Industry Partners */}
           <div className="relative group flex-1">
             <div
-              className={`absolute -bottom-2 -right-2 h-full w-full rounded-3xl -z-10 transition-all ${
+              className={`absolute -bottom-2 -right-2 h-full w-full rounded-2xl -z-10 transition-all ${
                 isDark
                   ? "bg-[#181a1d] border border-border-subtle"
                   : "bg-[#f4f0e6] border border-slate-200"
               }`}
             />
             <div
-              className={`h-full border rounded-3xl p-6 md:p-8 flex flex-col justify-between backdrop-blur transition-all duration-300 group-hover:-translate-y-0.5 ${
+              className={`h-full border rounded-2xl p-5 md:p-6 flex flex-col justify-between backdrop-blur transition-all duration-300 group-hover:-translate-y-0.5 ${
                 isDark
                   ? "border-border-subtle bg-bg-raised/40 hover:border-zinc-700"
                   : "border-slate-200 bg-white shadow-md shadow-slate-100/50 hover:border-slate-350"

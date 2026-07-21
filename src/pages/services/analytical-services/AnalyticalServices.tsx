@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useContactModal } from "@/components/shared/ContactModal";
-import molVideo from "./mol_9x9_1.mp4";
+import analyticalImg from "./analytical-chemistry-showcase.png";
 
 export default function AnalyticalServicesPage() {
   const { open: openContact } = useContactModal();
@@ -177,17 +177,13 @@ export default function AnalyticalServicesPage() {
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
-          <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-full max-w-sm rounded-3xl overflow-hidden border border-black/10 dark:border-white/10 bg-white/40 dark:bg-black/20 p-4 shadow-xl backdrop-blur-md">
+          <div className="md:col-span-5 flex justify-center w-full">
+            <div className="relative w-full rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-white/40 dark:bg-black/20 p-1.5 shadow-xl backdrop-blur-md">
               <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/10 via-transparent to-accent-purple/10 opacity-30 pointer-events-none" />
-              <video
-                src={molVideo}
-                poster="/precision_others/molecule_glass.png"
-                className="w-full h-auto object-cover rounded-2xl border border-black/5 dark:border-white/5 shadow-inner"
-                autoPlay
-                muted
-                loop
-                playsInline
+              <img
+                src={analyticalImg}
+                alt="Analytical Chemistry Lab Equipment"
+                className="w-full h-auto object-cover rounded-xl border border-black/5 dark:border-white/5 shadow-inner"
               />
             </div>
           </div>
@@ -312,9 +308,9 @@ export default function AnalyticalServicesPage() {
             return (
               <Card
                 key={idx}
-                className="p-8 border border-slate-200/60 dark:border-slate-900 bg-white/60 dark:bg-slate-950/20 rounded-2xl backdrop-blur-sm shadow-sm flex flex-col items-start gap-4"
+                className="p-5 border border-slate-200/60 dark:border-slate-900 bg-white/60 dark:bg-slate-950/20 rounded-xl backdrop-blur-sm shadow-sm flex flex-col items-start gap-4"
               >
-                <div className="p-3 rounded-xl bg-rose-500/10 text-rose-500">
+                <div className="p-2.5 rounded-xl bg-rose-500/10 text-rose-500">
                   <Icon className="w-5 h-5" />
                 </div>
                 <h3 className="font-serif-display font-bold text-lg text-foreground">{c.title}</h3>
@@ -451,11 +447,10 @@ export default function AnalyticalServicesPage() {
         </div>
       </section>
 
-      {/* Value Add Sections */}
       <section className="max-w-6xl mx-auto px-6 py-16 border-t border-slate-100 dark:border-slate-900 mt-12 grid md:grid-cols-2 gap-8">
         {/* Market Journey */}
-        <Card className="p-8 border border-slate-200/60 dark:border-slate-900 bg-white/60 dark:bg-slate-950/10 rounded-2xl shadow-sm space-y-6">
-          <h3 className="font-serif-display text-2xl font-bold text-foreground">
+        <Card className="p-5 border border-slate-200/60 dark:border-slate-900 bg-white/60 dark:bg-slate-950/10 rounded-xl shadow-sm space-y-5">
+          <h3 className="font-serif-display text-lg font-bold text-foreground">
             Accelerating Your Journey to Market
           </h3>
           <div className="space-y-4">
@@ -479,8 +474,8 @@ export default function AnalyticalServicesPage() {
         </Card>
 
         {/* Partnership Trust */}
-        <Card className="p-8 border border-slate-200/60 dark:border-slate-900 bg-white/60 dark:bg-slate-950/10 rounded-2xl shadow-sm space-y-6">
-          <h3 className="font-serif-display text-2xl font-bold text-foreground">
+        <Card className="p-5 border border-slate-200/60 dark:border-slate-900 bg-white/60 dark:bg-slate-950/10 rounded-xl shadow-sm space-y-5">
+          <h3 className="font-serif-display text-lg font-bold text-foreground">
             A Partnership Built on Trust and Expertise
           </h3>
           <div className="space-y-4">

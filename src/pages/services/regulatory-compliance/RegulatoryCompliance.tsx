@@ -280,17 +280,17 @@ function ImpactStrip() {
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="group relative h-full p-8 rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 transition-shadow overflow-hidden"
+                className="group relative h-full p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm hover:shadow-xl hover:shadow-emerald-500/5 transition-shadow overflow-hidden"
               >
                 <div className="absolute -top-20 -right-20 h-48 w-48 rounded-full bg-emerald-100 dark:bg-emerald-900/30 blur-3xl opacity-0 group-hover:opacity-70 transition-opacity duration-700" />
                 <div className="relative">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 ring-1 ring-emerald-100 dark:ring-emerald-900">
-                    <it.icon className="h-5 w-5" />
+                  <div className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 ring-1 ring-emerald-100 dark:ring-emerald-900">
+                    <it.icon className="h-4.5 w-4.5" />
                   </div>
-                  <h3 className="mt-6 font-serif-display italic text-2xl text-slate-900 dark:text-slate-100">
+                  <h3 className="mt-4 font-serif-display text-xl text-slate-900 dark:text-slate-100">
                     {it.title}
                   </h3>
-                  <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                  <p className="mt-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                     {it.body}
                   </p>
                 </div>
@@ -464,7 +464,7 @@ function DomainsSection() {
               <motion.div
                 whileHover={{ y: -8 }}
                 transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                className="group relative h-full rounded-3xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm hover:shadow-2xl hover:shadow-emerald-900/10 transition-shadow"
+                className="group relative h-full rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm hover:shadow-2xl hover:shadow-emerald-900/10 transition-shadow"
               >
                 {/* Image */}
                 <div className="relative h-52 overflow-hidden">
@@ -482,12 +482,12 @@ function DomainsSection() {
                 </div>
 
                 {/* Text body */}
-                <div className="relative flex flex-col gap-5 p-8">
+                <div className="relative flex flex-col gap-4 p-5">
                   <div>
-                    <h3 className="font-serif-display italic text-2xl md:text-3xl text-slate-900 dark:text-slate-100 leading-snug">
+                    <h3 className="font-serif-display text-lg md:text-xl font-medium text-slate-900 dark:text-slate-100 leading-snug">
                       {d.title}
                     </h3>
-                    <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                    <p className="mt-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                       {d.body}
                     </p>
                   </div>
@@ -763,19 +763,19 @@ function NumbersStrip() {
         <div className="mt-14 grid grid-cols-2 lg:grid-cols-4 gap-4">
           {STATS.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.08}>
-              <div className="h-full p-8 rounded-3xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm hover:shadow-lg transition-shadow duration-500">
+              <div className="h-full p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm hover:shadow-lg transition-shadow duration-500">
                 <div className="flex items-start justify-between gap-2">
-                  <div className="font-sans text-4xl md:text-5xl font-bold tracking-tight bg-gradient-to-br from-sky-500 to-emerald-500 bg-clip-text text-transparent">
+                  <div className="font-sans text-3xl md:text-4xl font-bold tracking-tight bg-gradient-to-br from-sky-500 to-emerald-500 bg-clip-text text-transparent">
                     <Counter to={s.value} suffix={s.suffix} />
                   </div>
-                  <div className="flex-shrink-0 h-10 w-10 rounded-xl bg-rose-50 dark:bg-rose-950/40 text-rose-400 grid place-items-center ring-1 ring-rose-100 dark:ring-rose-900/50">
-                    <s.icon className="h-4 w-4" />
+                  <div className="flex-shrink-0 h-9 w-9 rounded-xl bg-rose-50 dark:bg-rose-950/40 text-rose-400 grid place-items-center ring-1 ring-rose-100 dark:ring-rose-900/50">
+                    <s.icon className="h-3.5 w-3.5" />
                   </div>
                 </div>
-                <p className="mt-4 text-sm font-semibold text-slate-900 dark:text-slate-100">
+                <p className="mt-3 text-xs font-semibold text-slate-900 dark:text-slate-100">
                   {s.label}
                 </p>
-                <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">{s.sub}</p>
+                <p className="mt-1 text-[11px] text-slate-500 dark:text-slate-400">{s.sub}</p>
               </div>
             </Reveal>
           ))}
@@ -833,15 +833,15 @@ function ArchitectsGrid() {
               <motion.div
                 whileHover={{ y: -6 }}
                 transition={{ type: "spring", stiffness: 220, damping: 22 }}
-                className="group h-full p-7 rounded-3xl border border-slate-200 dark:border-slate-700 bg-slate-50/60 dark:bg-slate-800/60 hover:bg-white dark:hover:bg-slate-800 hover:border-emerald-200 dark:hover:border-emerald-700 hover:shadow-xl hover:shadow-emerald-500/5 transition-all"
+                className="group h-full p-5 rounded-2xl border border-slate-200 dark:border-slate-700 bg-slate-50/60 dark:bg-slate-800/60 hover:bg-white dark:hover:bg-slate-800 hover:border-emerald-200 dark:hover:border-emerald-700 hover:shadow-xl hover:shadow-emerald-500/5 transition-all"
               >
-                <div className="h-12 w-12 rounded-2xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 grid place-items-center ring-1 ring-emerald-100 dark:ring-emerald-900 group-hover:scale-110 transition-transform">
-                  <a.icon className="h-5 w-5" />
+                <div className="h-10 w-10 rounded-xl bg-emerald-50 dark:bg-emerald-950 text-emerald-600 dark:text-emerald-400 grid place-items-center ring-1 ring-emerald-100 dark:ring-emerald-900 group-hover:scale-110 transition-transform">
+                  <a.icon className="h-4.5 w-4.5" />
                 </div>
-                <h3 className="mt-6 font-serif-display italic text-xl text-slate-900 dark:text-slate-100 leading-snug">
+                <h3 className="mt-4 font-serif-display text-lg text-slate-900 dark:text-slate-100 leading-snug">
                   {a.title}
                 </h3>
-                <p className="mt-3 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+                <p className="mt-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                   {a.body}
                 </p>
               </motion.div>

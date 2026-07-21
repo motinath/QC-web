@@ -18,32 +18,32 @@ import {
 export function QcLandingContent() {
   const painPoints = [
     {
-      icon: <Timer className="w-5 h-5 text-amber-500" />,
+      icon: <Timer className="w-4 h-4 text-amber-500" />,
       title: "Pipelines Running Dry",
       text: "Drug discovery pipelines are almost running dry.",
     },
     {
-      icon: <FileX className="w-5 h-5 text-amber-500" />,
+      icon: <FileX className="w-4 h-4 text-amber-500" />,
       title: "Generics & Reformulations",
       text: "Much of the industry's 'innovation' is limited to generics and reformulations of existing drugs, leaving substantial room for genuinely differentiated science.",
     },
     {
-      icon: <Layers className="w-5 h-5 text-amber-500" />,
+      icon: <Layers className="w-4 h-4 text-amber-500" />,
       title: "Siloed Discovery Teams",
       text: "Discovery teams operate independently from regulatory and manufacturing teams.",
     },
     {
-      icon: <Database className="w-5 h-5 text-amber-500" />,
+      icon: <Database className="w-4 h-4 text-amber-500" />,
       title: "Trapped Data & Knowledge",
       text: "Biological data and best practices remain trapped in disconnected systems.",
     },
     {
-      icon: <AlertTriangle className="w-5 h-5 text-amber-500" />,
+      icon: <AlertTriangle className="w-4 h-4 text-amber-500" />,
       title: "Delayed Regulatory Planning",
       text: "Regulatory planning often starts too late and without adequate knowledge of components and processes.",
     },
     {
-      icon: <Workflow className="w-5 h-5 text-amber-500" />,
+      icon: <Workflow className="w-4 h-4 text-amber-500" />,
       title: "Lost Commercial Connection",
       text: "Connection is often lost between research, development, and commercialisation.",
     },
@@ -51,29 +51,29 @@ export function QcLandingContent() {
 
   const differentiators = [
     {
-      icon: <Zap className="w-6 h-6 text-accent-blue dark:text-accent-blue" />,
+      icon: <Zap className="w-5 h-5 text-accent-blue dark:text-accent-blue" />,
       title: "Brand New Pipeline",
       description: "A brand new drug discovery pipeline.",
     },
     {
-      icon: <Cpu className="w-6 h-6 text-accent-purple dark:text-accent-purple" />,
+      icon: <Cpu className="w-5 h-5 text-accent-purple dark:text-accent-purple" />,
       title: "Advanced Computation",
       description: "Advanced computational tools accelerate discovery, analysis, and optimisation.",
     },
     {
-      icon: <Workflow className="w-6 h-6 text-accent-emerald dark:text-accent-emerald" />,
+      icon: <Workflow className="w-5 h-5 text-accent-emerald dark:text-accent-emerald" />,
       title: "Connected Ecosystem",
       description:
         "Scientific, manufacturing, and regulatory workflows operate within a connected ecosystem.",
     },
     {
-      icon: <ShieldCheck className="w-6 h-6 text-amber-500" />,
+      icon: <ShieldCheck className="w-5 h-5 text-amber-500" />,
       title: "Built-in Regulatory Readiness",
       description:
         "Regulatory readiness is built into every stage rather than treated as a final hurdle.",
     },
     {
-      icon: <GraduationCap className="w-6 h-6 text-indigo-500" />,
+      icon: <GraduationCap className="w-5 h-5 text-indigo-500" />,
       title: "End-to-End & Workforce Support",
       description:
         "Support from early research through commercialisation and workforce development.",
@@ -94,10 +94,10 @@ export function QcLandingContent() {
             Quantum Codon – powering the next-generation bioeconomy
           </h2>
 
-          <div className="mt-8 p-6 md:p-10 rounded-3xl bg-white/70 dark:bg-white/[0.03] backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-xl relative overflow-hidden group sci-panel">
+          <div className="mt-8 p-5 md:p-7 rounded-2xl bg-white/70 dark:bg-white/[0.03] backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-xl relative overflow-hidden group sci-panel">
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent-blue/10 rounded-full filter blur-3xl -z-10 transition-all duration-700 group-hover:scale-125" />
 
-            <p className="text-base md:text-lg text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
+            <p className="text-sm md:text-base text-slate-800 dark:text-slate-200 font-medium leading-relaxed">
               As a first life sciences mover in the Amaravati Quantum Valley, Quantum Codon brings
               together biological innovation, computational intelligence, and compliance management
               in a single-window solution, eliminating fragmentation across the biotech value chain.
@@ -111,15 +111,15 @@ export function QcLandingContent() {
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-stretch">
             {/* Traditional Fragmented Challenge Card */}
-            <div className="md:col-span-6 p-6 md:p-8 rounded-3xl bg-rose-500/5 dark:bg-rose-500/10 border border-rose-500/20 flex flex-col justify-between sci-panel">
+            <div className="md:col-span-6 p-5 md:p-6 rounded-2xl bg-rose-500/5 dark:bg-rose-500/10 border border-rose-500/20 flex flex-col justify-between sci-panel">
               <div>
                 <span className="badge-meta text-rose-600 dark:text-rose-400">
                   SYSTEMIC CHALLENGE
                 </span>
-                <h3 className="font-serif-display text-2xl md:text-3xl mt-3 mb-4 text-foreground">
+                <h3 className="font-serif-display text-xl md:text-2xl mt-3 mb-4 text-foreground">
                   Biotechnology innovation remains fragmented.
                 </h3>
-                <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
                   Drug discovery teams work in one environment, bioinformatics analyses are
                   conducted in another, manufacturing development is outsourced elsewhere, and
                   regulatory compliance often becomes an afterthought.
@@ -132,16 +132,16 @@ export function QcLandingContent() {
             </div>
 
             {/* Quantum Codon Transformation Card */}
-            <div className="md:col-span-6 p-6 md:p-8 rounded-3xl bg-gradient-to-br from-accent-blue/10 via-accent-purple/10 to-accent-emerald/10 dark:from-accent-blue/20 dark:to-accent-purple/20 border border-accent-blue/30 flex flex-col justify-between shadow-lg relative overflow-hidden sci-panel">
+            <div className="md:col-span-6 p-5 md:p-6 rounded-2xl bg-gradient-to-br from-accent-blue/10 via-accent-purple/10 to-accent-emerald/10 dark:from-accent-blue/20 dark:to-accent-purple/20 border border-accent-blue/30 flex flex-col justify-between shadow-lg relative overflow-hidden sci-panel">
               <div>
                 <span className="inline-flex items-center gap-1.5 badge-meta text-accent-blue">
                   <Sparkles className="w-3.5 h-3.5" />
                   UNIFIED ARCHITECTURE
                 </span>
-                <h3 className="font-serif-display text-2xl md:text-3xl mt-3 mb-4 text-foreground">
+                <h3 className="font-serif-display text-xl md:text-2xl mt-3 mb-4 text-foreground">
                   Quantum Codon is changing that status quo.
                 </h3>
-                <p className="text-foreground text-sm md:text-base font-medium leading-relaxed">
+                <p className="text-foreground text-xs md:text-sm font-medium leading-relaxed">
                   As a first mover in the Amaravati Quantum Valley, Quantum Codon brings together
                   biological knowledge, computational intelligence, and compliance management into a
                   single integrated platform, into a single operating framework.
@@ -175,14 +175,14 @@ export function QcLandingContent() {
             {painPoints.map((item, index) => (
               <div
                 key={index}
-                className="p-6 rounded-2xl bg-white/80 dark:bg-white/[0.04] backdrop-blur-md border border-black/10 dark:border-white/10 hover:border-amber-500/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between group sci-panel"
+                className="p-4 rounded-xl bg-white/80 dark:bg-white/[0.04] backdrop-blur-md border border-black/10 dark:border-white/10 hover:border-amber-500/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between group sci-panel"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-amber-500/10 dark:bg-amber-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <div className="w-8 h-8 rounded-lg bg-amber-500/10 dark:bg-amber-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                     {item.icon}
                   </div>
-                  <h4 className="font-semibold text-base mb-2 text-foreground">{item.title}</h4>
-                  <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                  <h4 className="font-semibold text-sm mb-2 text-foreground">{item.title}</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">
                     {item.text}
                   </p>
                 </div>
@@ -204,8 +204,8 @@ export function QcLandingContent() {
         <div className="max-w-4xl mx-auto text-center">
           <span className="badge-meta text-accent-emerald">UNIFIED OPERATING MODEL</span>
           <h2 className="heading-section mt-3 mb-6">Quantum Codon Solves This Problem</h2>
-          <div className="p-6 md:p-10 rounded-3xl bg-white/80 dark:bg-white/[0.04] backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl relative sci-panel">
-            <p className="text-base md:text-lg text-foreground font-medium leading-relaxed">
+          <div className="p-5 md:p-7 rounded-2xl bg-white/80 dark:bg-white/[0.04] backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-2xl relative sci-panel">
+            <p className="text-sm md:text-base text-foreground font-medium leading-relaxed">
               We offer a brand new drug discovery platform and connect critical functions required
               to bring biotechnology products from concept to commercialisation. By integrating
               biology, computation, and compliance into a unified operating model, we create
@@ -227,16 +227,16 @@ export function QcLandingContent() {
             {differentiators.map((diff, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-3xl bg-white/70 dark:bg-white/[0.03] backdrop-blur-lg border border-black/10 dark:border-white/10 hover:border-accent-blue/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+                className="p-5 rounded-2xl bg-white/70 dark:bg-white/[0.03] backdrop-blur-lg border border-black/10 dark:border-white/10 hover:border-accent-blue/50 hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-accent-blue/10 dark:bg-accent-blue/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-9 h-9 rounded-xl bg-accent-blue/10 dark:bg-accent-blue/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     {diff.icon}
                   </div>
-                  <h3 className="font-serif-display text-xl font-medium mb-3 text-foreground">
+                  <h3 className="font-serif-display text-lg font-medium mb-3 text-foreground">
                     {diff.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <p className="text-xs text-muted-foreground leading-relaxed">
                     {diff.description}
                   </p>
                 </div>

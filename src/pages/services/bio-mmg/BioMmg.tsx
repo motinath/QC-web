@@ -239,9 +239,9 @@ export default function BioMmgPage() {
             ].map((sys) => (
               <div
                 key={sys.system}
-                className="group rounded-3xl overflow-hidden border border-foreground/5 bg-white/40 dark:bg-black/20 p-5 shadow-lg backdrop-blur-md flex flex-col justify-between hover:-translate-y-2 hover:shadow-2xl hover:border-accent-purple/35 transition-all duration-500"
+                className="group rounded-2xl overflow-hidden border border-foreground/5 bg-white/40 dark:bg-black/20 p-4 shadow-lg backdrop-blur-md flex flex-col justify-between hover:-translate-y-2 hover:shadow-2xl hover:border-accent-purple/35 transition-all duration-500"
               >
-                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-foreground/5 bg-slate-950 mb-6">
+                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl border border-foreground/5 bg-slate-950 mb-5">
                   <img
                     src={sys.image}
                     alt={sys.title}
@@ -252,10 +252,10 @@ export default function BioMmgPage() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-serif-display text-2xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-accent-purple">
+                  <h3 className="font-serif-display text-lg font-semibold text-foreground mb-2 transition-colors duration-300 group-hover:text-accent-purple">
                     {sys.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{sys.desc}</p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{sys.desc}</p>
                 </div>
               </div>
             ))}
@@ -356,15 +356,15 @@ export default function BioMmgPage() {
             ].map((app) => (
               <div
                 key={app.title}
-                className="group p-8 rounded-3xl border border-foreground/5 bg-white/60 dark:bg-white/5 backdrop-blur shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent-purple/20 hover:bg-white/85 dark:hover:bg-white/10"
+                className="group p-5 rounded-2xl border border-foreground/5 bg-white/60 dark:bg-white/5 backdrop-blur shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent-purple/20 hover:bg-white/85 dark:hover:bg-white/10"
               >
                 <span className="text-[10px] font-mono tracking-widest text-accent-purple uppercase font-bold block mb-4 transition-transform duration-300 group-hover:translate-x-1">
                   {app.tag}
                 </span>
-                <h3 className="font-serif-display text-2xl font-semibold text-foreground mb-3 transition-colors duration-300 group-hover:text-accent-purple">
+                <h3 className="font-serif-display text-lg font-semibold text-foreground mb-2 transition-colors duration-300 group-hover:text-accent-purple">
                   {app.title}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{app.desc}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">{app.desc}</p>
               </div>
             ))}
           </div>

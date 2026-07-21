@@ -149,8 +149,8 @@ export default function About() {
 
         {/* SECTION 1: OUR STORY */}
         <section id="our-story" className="relative">
-          <div className="grid lg:grid-cols-12 gap-12 items-start">
-            <div className="lg:col-span-7 space-y-6">
+          <div className="w-full space-y-8">
+            <div className="space-y-6">
               <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase text-accent-blue">
                 <Microscope className="w-4 h-4" />
                 <span>Foundational Heritage</span>
@@ -181,46 +181,50 @@ export default function About() {
               </div>
             </div>
 
-            {/* Sidebar Highlights */}
-            <div className="lg:col-span-5 space-y-6">
-              <div className="p-8 rounded-3xl bg-white/80 dark:bg-white/[0.04] backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-xl space-y-6">
-                <h3 className="font-serif-display text-xl font-semibold text-foreground">
-                  Scientific Credibility Wall
-                </h3>
+            {/* Scientific Credibility Wall (Horizontal Grid under story) */}
+            <div className="p-8 rounded-3xl bg-white/80 dark:bg-white/[0.04] backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-xl space-y-6 w-full max-w-4xl mx-auto">
+              <h3 className="font-serif-display text-xl font-semibold text-foreground text-center">
+                Scientific Credibility Wall
+              </h3>
 
-                <div className="space-y-4">
-                  <div className="p-4 rounded-2xl bg-accent-blue/10 dark:bg-accent-blue/20 border border-accent-blue/20 flex gap-4 items-start">
-                    <Award className="w-6 h-6 text-accent-blue shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-sm text-foreground">15+ Years Discovery</h4>
-                      <p className="text-xs text-muted-foreground mt-1">
-                        Foundational research proving silent DNA & untranslated RNA function.
-                      </p>
-                    </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="p-5 rounded-2xl bg-accent-blue/10 dark:bg-accent-blue/20 border border-accent-blue/20 flex flex-col items-center text-center gap-3">
+                  <div className="h-10 w-10 flex items-center justify-center rounded-full bg-accent-blue/10 text-accent-blue border border-accent-blue/10">
+                    <Award className="w-5 h-5 shrink-0" />
                   </div>
-
-                  <div className="p-4 rounded-2xl bg-accent-purple/10 dark:bg-accent-purple/20 border border-accent-purple/20 flex gap-4 items-start">
-                    <Dna className="w-6 h-6 text-accent-purple shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-sm text-foreground">
-                        12+ Peer-Reviewed Studies
-                      </h4>
-                      <p className="text-xs text-muted-foreground mt-1">
-                        Published body of peer-validated scientific literature.
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="font-semibold text-sm text-foreground">15+ Years Discovery</h4>
+                    <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">
+                      Foundational research proving silent DNA & untranslated RNA function.
+                    </p>
                   </div>
+                </div>
 
-                  <div className="p-4 rounded-2xl bg-accent-emerald/10 dark:bg-accent-emerald/20 border border-accent-emerald/20 flex gap-4 items-start">
-                    <Globe2 className="w-6 h-6 text-accent-emerald shrink-0 mt-0.5" />
-                    <div>
-                      <h4 className="font-semibold text-sm text-foreground">
-                        U.S. NAS & OPCW Keynotes
-                      </h4>
-                      <p className="text-xs text-muted-foreground mt-1">
-                        Presented to top international scientific and regulatory bodies.
-                      </p>
-                    </div>
+                <div className="p-5 rounded-2xl bg-accent-purple/10 dark:bg-accent-purple/20 border border-accent-purple/20 flex flex-col items-center text-center gap-3">
+                  <div className="h-10 w-10 flex items-center justify-center rounded-full bg-accent-purple/10 text-accent-purple border border-accent-purple/10">
+                    <Dna className="w-5 h-5 shrink-0" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-sm text-foreground">
+                      12+ Peer-Reviewed Studies
+                    </h4>
+                    <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">
+                      Published body of peer-validated scientific literature.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="p-5 rounded-2xl bg-accent-emerald/10 dark:bg-accent-emerald/20 border border-accent-emerald/20 flex flex-col items-center text-center gap-3">
+                  <div className="h-10 w-10 flex items-center justify-center rounded-full bg-accent-emerald/10 text-accent-emerald border border-accent-emerald/10">
+                    <Globe2 className="w-5 h-5 shrink-0" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-sm text-foreground">
+                      U.S. NAS & OPCW Keynotes
+                    </h4>
+                    <p className="text-xs text-muted-foreground mt-1.5 leading-relaxed">
+                      Presented to top international scientific and regulatory bodies.
+                    </p>
                   </div>
                 </div>
               </div>

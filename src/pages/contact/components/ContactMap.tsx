@@ -3,10 +3,10 @@ import { Reveal } from "@/components/shared/Reveal";
 import buildingImg from "../office-building.jpg";
 
 export function ContactMap() {
-  const mapSearchUrl = "https://maps.app.goo.gl/bAURtJ7543zqQ3qG8";
+  const mapSearchUrl = "https://maps.app.goo.gl/id9xQDzeWBkxHSt28";
   // Standard embeddable Google Maps query URL
   const embedMapUrl =
-    "https://maps.google.com/maps?q=Amaravati%20Quantum%20Valley%20Amaravati%20Andhra%20Pradesh%20India&t=&z=14&ie=UTF8&iwloc=&output=embed";
+    "https://maps.google.com/maps?q=Sy.%20No.%2053,%20IT%20Park%20Rd,%20Kesarapalli,%20Gannavaram,%20Andhra%20Pradesh%20521102,%20India&t=&z=14&ie=UTF8&iwloc=&output=embed";
 
   return (
     <section className="px-6 py-12 md:py-20 bg-[#f0f4f8]/50 dark:bg-[#0c131f]/50 transition-colors duration-300 border-t border-b border-border/10">
@@ -36,9 +36,9 @@ export function ContactMap() {
                   <div>
                     <h3 className="font-semibold text-foreground text-sm">Quantum Codon Pvt Ltd</h3>
                     <p className="text-muted-foreground text-xs mt-2 leading-relaxed">
-                      Amaravati Quantum Valley,
+                      Sy. No. 53, IT Park Rd, Kesarapalli, Gannavaram,
                       <br />
-                      Amaravati, Andhra Pradesh 522020,
+                      Andhra Pradesh 521102,
                       <br />
                       India
                     </p>

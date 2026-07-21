@@ -745,8 +745,8 @@ print(paste("Significant genes found:", nrow(significant_genes)))`}
               </div>
             </div>
 
-            <div className="lg:col-span-6 overflow-hidden rounded-3xl border border-foreground/10 bg-white/40 dark:bg-black/20 backdrop-blur-md shadow-lg p-6">
-              <h4 className="font-mono text-xs uppercase tracking-wider text-cyan-600 dark:text-cyan-400 mb-4 font-semibold">
+            <div className="lg:col-span-6 overflow-hidden rounded-2xl border border-foreground/10 bg-white/40 dark:bg-black/20 backdrop-blur-md shadow-lg p-5">
+              <h4 className="font-mono text-[11px] uppercase tracking-wider text-cyan-600 dark:text-cyan-400 mb-4 font-semibold">
                 Choosing a Language or Tool
               </h4>
               <div className="space-y-3">
