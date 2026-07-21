@@ -1,0 +1,4 @@
+# Universal Single-Page Application (SPA) Fallback Redirects
+# Supported natively by Netlify, Cloudflare Pages, Render, and static web hosts.
+
+/*    /index.html   200

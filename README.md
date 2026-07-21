@@ -1,8 +1,11 @@
 # Quantum Codon (QCodon) — Enterprise Production Platform
 
-[![CI Gate](https://github.com/qcodon/qcodon/actions/workflows/ci.yml/badge.svg)](https://github.com/qcodon/qcodon/actions/workflows/ci.yml)
-[![Render Status](https://img.shields.io/badge/Render-Deploy%20Ready-emerald)](https://render.com)
-[![WCAG 2.2 AA](https://img.shields.io/badge/Accessibility-WCAG%202.2%20AA-emerald)](https://www.w3.org/WAI/WCAG22/quickref/)
+[![CI Gate](https://github.com/motinath/QC-web/actions/workflows/ci.yml/badge.svg)](https://github.com/motinath/QC-web/actions/workflows/ci.yml)
+[![Vercel Ready](https://img.shields.io/badge/Vercel-Deploy%20Ready-black)](https://vercel.com)
+[![Netlify Ready](https://img.shields.io/badge/Netlify-Deploy%20Ready-00C7B7)](https://netlify.com)
+[![Render Ready](https://img.shields.io/badge/Render-Deploy%20Ready-emerald)](https://render.com)
+[![Cloudflare Ready](https://img.shields.io/badge/Cloudflare%20Pages-Deploy%20Ready-f38020)](https://pages.cloudflare.com)
+[![Docker Ready](https://img.shields.io/badge/Docker-Deploy%20Ready-2496ED)](https://docker.com)
 
 Production-grade frontend platform for **Quantum Codon**, unlocking untranslated regions, dark genome targets, and precision therapeutics with AI and biocomputing.
 
@@ -15,7 +18,7 @@ Production-grade frontend platform for **Quantum Codon**, unlocking untranslated
 - **Styling & Tokens**: [Tailwind CSS v4](https://tailwindcss.com/), HSL Design System Tokens (`src/styles/tokens.css`)
 - **Graphics & 3D**: Three.js, `@react-three/fiber`, `@react-three/drei`
 - **Form System**: React Hook Form, Zod Schema Validation
-- **Deployment**: [Render](https://render.com) Static Site (`render.yaml` with automated GitHub CI/CD)
+- **Universal Deployment**: Zero-Config multi-platform support for **Vercel**, **Netlify**, **Render**, **Cloudflare Pages**, and **Docker**
 - **Quality Gates**: ESLint, TypeScript Strict Mode, Prettier
 
 ---
