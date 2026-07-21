@@ -5,7 +5,7 @@ services:
     name: qcodon-platform
     env: static
     buildCommand: npm run build
-    staticPublishPath: ./dist/client
+    staticPublishPath: ./dist
     pullRequestPreviewsEnabled: true
     routes:
       - type: rewrite

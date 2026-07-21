@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "outputDirectory": "dist/client",
+  "outputDirectory": "dist",
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
   "cleanUrls": true,

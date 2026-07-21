@@ -2,7 +2,7 @@
 
 [build]
   command = "npm run build"
-  publish = "dist/client"
+  publish = "dist"
 
 # SPA Wildcard Routing Rule
 [[redirects]]
