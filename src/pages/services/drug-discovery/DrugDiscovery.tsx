@@ -1514,119 +1514,125 @@ export function DarkGenomeSandbox({ isDark }: { isDark: boolean }) {
   const [isPlaying, setIsPlaying] = useState(true);
   const [hoveredNode, setHoveredNode] = useState<number | null>(null);
 
-  const stages = [
-    {
-      id: "01",
-      name: "Intro",
-      label: "Intro - Capsule Appears",
-      desc: "Scene fades in from darkness. Particle field forms. Capsule materializes in the center with a soft glow.",
-      durationText: "1.2s",
-      easingText: "easeOutCubic",
-    },
-    {
-      id: "02",
-      name: "Protein-Coding",
-      label: "Connect: Protein-Coding",
-      desc: "Top-left node activates. Wavy line draws from capsule top to the Protein-Coding node. Node icon and text fade in with gold glow.",
-      durationText: "1.4s",
-      easingText: "easeInOutCubic",
-    },
-    {
-      id: "03",
-      name: "Currently Mined",
-      label: "Connect: Currently Mined",
-      desc: "Top-right node activates. Wavy line draws from capsule top-right to the Currently Mined node. Copper glow travels to the node.",
-      durationText: "1.4s",
-      easingText: "easeInOutCubic",
-    },
-    {
-      id: "04",
-      name: "Class I Dark DNA",
-      label: "Connect: Class I Dark DNA",
-      desc: "Middle-left node activates. Wavy line draws from capsule middle to the Class I Dark DNA node. Amber glow pulses along the line.",
-      durationText: "1.4s",
-      easingText: "easeInOutCubic",
-    },
-    {
-      id: "05",
-      name: "Class I Potential",
-      label: "Connect: Class I Potential",
-      desc: "Middle-right node activates. Wavy line draws from capsule middle-right to the Class I Potential node. Amber glow pulses.",
-      durationText: "1.4s",
-      easingText: "easeInOutCubic",
-    },
-    {
-      id: "06",
-      name: "Class II Dark RNA",
-      label: "Connect: Class II Dark RNA",
-      desc: "Lower-left node activates. Wavy line draws from capsule lower section to the Class II Dark RNA node. Indigo glow pulses.",
-      durationText: "1.4s",
-      easingText: "easeInOutCubic",
-    },
-    {
-      id: "07",
-      name: "Class II Potential",
-      label: "Connect: Class II Potential",
-      desc: "Lower-right node activates. All 6 nodes are now connected. Indigo glow travels to the final node.",
-      durationText: "1.4s",
-      easingText: "easeInOutCubic",
-    },
-    {
-      id: "08",
-      name: "All Active",
-      label: "All Connections Active",
-      desc: "All 6 nodes are connected. Lines pulse once. Capsule rotation slows and settles in the center.",
-      durationText: "1.2s",
-      easingText: "easeOutCubic",
-    },
-    {
-      id: "09",
-      name: "Rotation Highlight",
-      label: "Capsule Rotation Highlight",
-      desc: "Capsule rotates 360° on Y-axis. Bands emit sequential glow from top to bottom and back.",
-      durationText: "1.2s",
-      easingText: "linear",
-    },
-    {
-      id: "10",
-      name: "Active Event",
-      label: "Active Sequence Event",
-      desc: "Bottom info panel expands from center. Text types in with subtle scan effect. Background particles intensify.",
-      durationText: "1.6s",
-      easingText: "easeOutCubic",
-    },
-    {
-      id: "11",
-      name: "Timeline Nav",
-      label: "Timeline / Steps Navigation",
-      desc: "Step timeline appears at the bottom. Active step is highlighted. User can navigate steps. On hover, corresponding line & node pulse.",
-      durationText: "0.6s",
-      easingText: "easeInOutCubic",
-    },
-    {
-      id: "12",
-      name: "Loop & Idle",
-      label: "Loop & Idle State",
-      desc: "Subtle ambient loop. Capsule continues slow rotation. Connections breathe softly. Particles drift.",
-      durationText: "6.0s",
-      easingText: "easeInOutSine",
-    },
-  ];
+  const stages = useMemo(
+    () => [
+      {
+        id: "01",
+        name: "Intro",
+        label: "Intro - Capsule Appears",
+        desc: "Scene fades in from darkness. Particle field forms. Capsule materializes in the center with a soft glow.",
+        durationText: "1.2s",
+        easingText: "easeOutCubic",
+      },
+      {
+        id: "02",
+        name: "Protein-Coding",
+        label: "Connect: Protein-Coding",
+        desc: "Top-left node activates. Wavy line draws from capsule top to the Protein-Coding node. Node icon and text fade in with gold glow.",
+        durationText: "1.4s",
+        easingText: "easeInOutCubic",
+      },
+      {
+        id: "03",
+        name: "Currently Mined",
+        label: "Connect: Currently Mined",
+        desc: "Top-right node activates. Wavy line draws from capsule top-right to the Currently Mined node. Copper glow travels to the node.",
+        durationText: "1.4s",
+        easingText: "easeInOutCubic",
+      },
+      {
+        id: "04",
+        name: "Class I Dark DNA",
+        label: "Connect: Class I Dark DNA",
+        desc: "Middle-left node activates. Wavy line draws from capsule middle to the Class I Dark DNA node. Amber glow pulses along the line.",
+        durationText: "1.4s",
+        easingText: "easeInOutCubic",
+      },
+      {
+        id: "05",
+        name: "Class I Potential",
+        label: "Connect: Class I Potential",
+        desc: "Middle-right node activates. Wavy line draws from capsule middle-right to the Class I Potential node. Amber glow pulses.",
+        durationText: "1.4s",
+        easingText: "easeInOutCubic",
+      },
+      {
+        id: "06",
+        name: "Class II Dark RNA",
+        label: "Connect: Class II Dark RNA",
+        desc: "Lower-left node activates. Wavy line draws from capsule lower section to the Class II Dark RNA node. Indigo glow pulses.",
+        durationText: "1.4s",
+        easingText: "easeInOutCubic",
+      },
+      {
+        id: "07",
+        name: "Class II Potential",
+        label: "Connect: Class II Potential",
+        desc: "Lower-right node activates. All 6 nodes are now connected. Indigo glow travels to the final node.",
+        durationText: "1.4s",
+        easingText: "easeInOutCubic",
+      },
+      {
+        id: "08",
+        name: "All Active",
+        label: "All Connections Active",
+        desc: "All 6 nodes are connected. Lines pulse once. Capsule rotation slows and settles in the center.",
+        durationText: "1.2s",
+        easingText: "easeOutCubic",
+      },
+      {
+        id: "09",
+        name: "Rotation Highlight",
+        label: "Capsule Rotation Highlight",
+        desc: "Capsule rotates 360° on Y-axis. Bands emit sequential glow from top to bottom and back.",
+        durationText: "1.2s",
+        easingText: "linear",
+      },
+      {
+        id: "10",
+        name: "Active Event",
+        label: "Active Sequence Event",
+        desc: "Bottom info panel expands from center. Text types in with subtle scan effect. Background particles intensify.",
+        durationText: "1.6s",
+        easingText: "easeOutCubic",
+      },
+      {
+        id: "11",
+        name: "Timeline Nav",
+        label: "Timeline / Steps Navigation",
+        desc: "Step timeline appears at the bottom. Active step is highlighted. User can navigate steps. On hover, corresponding line & node pulse.",
+        durationText: "0.6s",
+        easingText: "easeInOutCubic",
+      },
+      {
+        id: "12",
+        name: "Loop & Idle",
+        label: "Loop & Idle State",
+        desc: "Subtle ambient loop. Capsule continues slow rotation. Connections breathe softly. Particles drift.",
+        durationText: "6.0s",
+        easingText: "easeInOutSine",
+      },
+    ],
+    [],
+  );
 
-  const stageDurations = [
-    3000, // Stage 0 (01 Intro)
-    3000, // Stage 1 (02 Protein-Coding)
-    3000, // Stage 2 (03 Currently Mined)
-    3000, // Stage 3 (04 Class I Dark DNA)
-    3000, // Stage 4 (05 Class I Potential)
-    3000, // Stage 5 (06 Class II Dark RNA)
-    3000, // Stage 6 (07 Class II Potential)
-    2500, // Stage 7 (08 All Connections Active)
-    2500, // Stage 8 (09 Capsule Rotation Highlight)
-    4000, // Stage 9 (10 Active Sequence Event)
-    3000, // Stage 10 (11 Timeline Nav)
-    8000, // Stage 11 (12 Loop & Idle State)
-  ];
+  const stageDurations = useMemo(
+    () => [
+      3000, // Stage 0 (01 Intro)
+      3000, // Stage 1 (02 Protein-Coding)
+      3000, // Stage 2 (03 Currently Mined)
+      3000, // Stage 3 (04 Class I Dark DNA)
+      3000, // Stage 4 (05 Class I Potential)
+      3000, // Stage 5 (06 Class II Dark RNA)
+      3000, // Stage 6 (07 Class II Potential)
+      2500, // Stage 7 (08 All Connections Active)
+      2500, // Stage 8 (09 Capsule Rotation Highlight)
+      3500, // Stage 9 (10 Active Sequence Event)
+      3000, // Stage 10 (11 Timeline / Steps Nav)
+      6000, // Stage 11 (12 Loop & Idle State)
+    ],
+    [],
+  );
 
   // Auto-play loop
   useEffect(() => {
@@ -1635,7 +1641,7 @@ export function DarkGenomeSandbox({ isDark }: { isDark: boolean }) {
       setActiveStage((prev) => (prev + 1) % 12);
     }, stageDurations[activeStage] || 3000);
     return () => clearTimeout(timer);
-  }, [isPlaying, activeStage]);
+  }, [isPlaying, activeStage, stageDurations]);
 
   // Typewriter effect
   const [typedDesc, setTypedDesc] = useState("");
@@ -1653,7 +1659,7 @@ export function DarkGenomeSandbox({ isDark }: { isDark: boolean }) {
       }
     }, 15);
     return () => clearInterval(interval);
-  }, [activeStage]);
+  }, [activeStage, stages]);
 
   const isNodeActive = (nodeIndex: number) => {
     if (activeStage >= 7) return true; // stages 7+ = all connected
@@ -1687,12 +1693,12 @@ export function DarkGenomeSandbox({ isDark }: { isDark: boolean }) {
     }));
   }, []);
 
-  const colorGold = {
-    activeBorder:
-      "border-[#cca54a]/60 dark:border-[#cca54a]/50 shadow-[0_0_15px_rgba(204,165,74,0.06)]",
-    activeBg: "bg-[#cca54a]/5 dark:bg-[#cca54a]/3",
-    activeText: "text-[#cca54a] dark:text-[#cca54a]",
+  type _ColorConfig = {
+    activeBorder: string;
+    activeBg: string;
+    activeText: string;
   };
+
   const _colorAmber = {
     activeBorder:
       "border-amber-500/60 dark:border-amber-500/50 shadow-[0_0_15px_rgba(245,158,11,0.06)]",
@@ -1700,12 +1706,6 @@ export function DarkGenomeSandbox({ isDark }: { isDark: boolean }) {
     activeText: "text-amber-600 dark:text-amber-400",
   };
   const _colorIndigo = {
-    activeBorder:
-      "border-[#3f4c8c]/60 dark:border-[#3f4c8c]/50 shadow-[0_0_15px_rgba(63,76,140,0.06)]",
-    activeBg: "bg-[#3f4c8c]/5 dark:bg-[#3f4c8c]/3",
-    activeText: "text-[#3f4c8c] dark:text-[#5c6bb0]",
-  };
-  const _colorCopper = {
     activeBorder:
       "border-[#3e6b5c]/60 dark:border-[#3e6b5c]/50 shadow-[0_0_15px_rgba(62,107,92,0.06)]",
     activeBg: "bg-[#3e6b5c]/5 dark:bg-[#3e6b5c]/3",
@@ -1733,7 +1733,7 @@ export function DarkGenomeSandbox({ isDark }: { isDark: boolean }) {
     title: string,
     subtitle: string,
     icon: React.ReactNode,
-    colorClass: typeof colorGold,
+    colorClass: _ColorConfig,
     isActive: boolean,
   ) => {
     const isHovered = hoveredNode === badgeNum;
@@ -2181,7 +2181,7 @@ export function DarkGenomeSandbox({ isDark }: { isDark: boolean }) {
               { d: "M 456 150 C 501 150, 546 190, 576 210 S 626 230, 695 220", col: "#f59e0b" },
               { d: "M 456 310 C 501 320, 551 345, 586 358 S 626 368, 695 362", col: "#3f4c8c" },
             ] as { d: string; col: string }[]
-          ).map(({ d, col }, i) => (
+          ).map(({ d, col: _col }, i) => (
             <path
               key={`ghost-${i}`}
               d={d}

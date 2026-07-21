@@ -480,9 +480,12 @@ function ChatPanel({ onClose }: { onClose: () => void }) {
 
   // Sync greeting to current route
   useEffect(() => {
-    if (messages.length === 1 && messages[0].id === "init") {
-      setMessages([{ id: "init", sender: "ai", text: getRouteGreeting(pathname) }]);
-    }
+    setMessages((prev) => {
+      if (prev.length === 1 && prev[0].id === "init") {
+        return [{ id: "init", sender: "ai", text: getRouteGreeting(pathname) }];
+      }
+      return prev;
+    });
   }, [pathname]);
 
   // Auto-scroll

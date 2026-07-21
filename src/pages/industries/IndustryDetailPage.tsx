@@ -58,9 +58,7 @@ export default function IndustryDetailPage({ slug }: { slug: string }) {
 
       <section className="max-w-5xl mx-auto px-6 mt-16">
         <p className="text-xs tracking-[0.3em] text-accent-blue uppercase">Overview</p>
-        <h2 className="font-serif-display text-3xl md:text-4xl mt-3">
-          How we serve {i.title}
-        </h2>
+        <h2 className="font-serif-display text-3xl md:text-4xl mt-3">How we serve {i.title}</h2>
         <p className="mt-5 text-base text-muted-foreground leading-relaxed max-w-3xl">
           {i.overview}
         </p>

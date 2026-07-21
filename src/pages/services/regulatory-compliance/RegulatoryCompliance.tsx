@@ -31,10 +31,10 @@ import {
 import { useContactModal } from "../../../components/shared/ContactModal";
 import facilityImg from "./work-reg.png";
 import biotechImg from "./molecule.jpeg";
-import biomanufacturingImg from "../bio-mmg/bioprocess-control-bioreactor.jpg";
+import _biomanufacturingImg from "../bio-mmg/bioprocess-control-bioreactor.jpg";
 import bioaiImg from "./brainr.jpeg";
 import bioRegImg from "./bio-regulatory-compliance.png";
-import analyticalImg from "./analytical-chemistry.jpg";
+import _analyticalImg from "./analytical-chemistry.jpg";
 import heroRegImg from "./hero-reg.png";
 import manfImg from "./manf.jpg";
 

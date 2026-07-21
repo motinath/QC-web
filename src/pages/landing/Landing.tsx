@@ -3,7 +3,7 @@ import { Link } from "@/lib/router-compat";
 // Retained hero video import reference
 import _heroVideo from "./hero.mp4";
 import { QcLandingContent } from "./components/QcLandingContent";
-import { ArrowRight, Dna } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function Landing() {
   return (
@@ -15,8 +15,6 @@ export default function Landing() {
 
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="flex flex-col items-center space-y-6">
-
-
             {/* Main Headline */}
             <h1 className="font-serif-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.08] text-foreground font-bold tracking-tight">
               The genome holds a secret{" "}
