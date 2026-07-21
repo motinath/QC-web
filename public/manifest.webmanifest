@@ -1,0 +1,17 @@
+{
+  "name": "Quantum Codon",
+  "short_name": "QCodon",
+  "description": "Unlocking the dark genome for next-generation therapeutics, bioinformatics, and biotech innovation.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080b11",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
