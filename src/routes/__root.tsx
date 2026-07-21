@@ -83,11 +83,13 @@ function RootComponent() {
       <ThemeProvider>
         <ContactModalProvider>
           <QcPreloader3D />
-          <QcNavbar />
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
-          <SiteFooter />
-          <QcChatbot />
+          <div className="qc-landing-content">
+            <QcNavbar />
+            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+            <Outlet />
+            <SiteFooter />
+            <QcChatbot />
+          </div>
         </ContactModalProvider>
       </ThemeProvider>
     </QueryClientProvider>

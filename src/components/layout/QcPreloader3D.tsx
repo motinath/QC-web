@@ -5,28 +5,37 @@ export default function QcPreloader3D() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
-    // Lock body scroll during preloader sequence
+    // Lock body scroll during preloader sequence & add active class
     document.body.style.overflow = "hidden";
+    document.body.classList.add("preloader-active");
 
     // Guarantee programmatic video playback on mount
     if (videoRef.current) {
       videoRef.current.muted = true;
-      videoRef.current.play().catch(() => {});
+      videoRef.current.play().catch(() => { });
     }
 
-    // Continuous 0-to-full zoom-in animation -> at 4.2s start camera zoom dissolve -> exact 5.0s hard stop completion
+    // Play preloader for 2.0 seconds (0s - 2.0s)
+    // At 2.0s (2000ms): start camera zoom-in & fade dissolve transition during 3rd second
     const timer1 = setTimeout(() => {
       setPhase("zooming");
-    }, 4200);
+      document.body.classList.remove("preloader-active");
+      document.body.classList.add("preloader-zooming");
+    }, 1500);
 
+    // At 3.0s (3000ms): complete preloader sequence, unmount, and unlock body scroll
     const timer2 = setTimeout(() => {
       setPhase("hidden");
+      document.body.classList.remove("preloader-zooming");
+      document.body.classList.add("preloader-done");
       document.body.style.overflow = "";
-    }, 5000);
+    }, 2000);
 
     return () => {
       clearTimeout(timer1);
       clearTimeout(timer2);
+      document.body.classList.remove("preloader-active", "preloader-zooming");
+      document.body.classList.add("preloader-done");
       document.body.style.overflow = "";
     };
   }, []);
@@ -35,16 +44,16 @@ export default function QcPreloader3D() {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden select-none pointer-events-auto touch-none overscroll-none transition-opacity duration-1000 ${
-        phase === "zooming" ? "opacity-0 pointer-events-none" : "opacity-100"
-      }`}
+      className={`fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden select-none pointer-events-auto touch-none overscroll-none transition-all duration-1000 ease-in-out ${phase === "zooming"
+        ? "opacity-0 pointer-events-none scale-125 blur-sm"
+        : "opacity-100 scale-100 blur-none"
+        }`}
       style={{ background: "#050608" }}
     >
-      {/* Background Video (/d.mp4) Fitted cleanly without extreme zoom */}
+      {/* Background Video (/d.mp4) Fitted cleanly with camera zoom transition */}
       <div
-        className={`absolute inset-0 flex items-center justify-center w-full h-full transition-all duration-700 ease-in-out transform-gpu ${
-          phase === "zooming" ? "scale-105 opacity-0" : "scale-100 opacity-100"
-        }`}
+        className={`absolute inset-0 flex items-center justify-center w-full h-full transition-all duration-1000 ease-in-out transform-gpu ${phase === "zooming" ? "scale-150 opacity-0" : "scale-100 opacity-100"
+          }`}
       >
         <video
           ref={videoRef}
@@ -62,11 +71,10 @@ export default function QcPreloader3D() {
 
       {/* Cinematic Center Title */}
       <div
-        className={`relative z-20 text-center px-6 transition-all duration-700 ease-in-out transform-gpu ${
-          phase === "zooming"
-            ? "scale-105 opacity-0 -translate-y-2"
-            : "scale-100 opacity-100 translate-y-0"
-        }`}
+        className={`relative z-20 text-center px-6 transition-all duration-1000 ease-in-out transform-gpu ${phase === "zooming"
+          ? "scale-135 opacity-0 -translate-y-4"
+          : "scale-100 opacity-100 translate-y-0"
+          }`}
       >
         <h1 className="font-serif-display text-5xl md:text-7xl font-normal tracking-tight text-white animate-title-glow">
           Quantum Codon
