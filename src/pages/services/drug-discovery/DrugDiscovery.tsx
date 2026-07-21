@@ -254,12 +254,6 @@ export function InteractiveDiscoveryPipeline({ isDark }: { isDark: boolean }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [activeStage, setActiveStage] = useState(7); // Culmination cures highlighted by default
 
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.6;
-    }
-  }, []);
-
   const stages = [
     {
       num: "01",
