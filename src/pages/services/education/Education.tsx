@@ -26,6 +26,7 @@ interface EducationItem {
   durationOrDate: string;
   tags: string[];
   gradient: string; // Background gradient class for the card thumbnail placeholder
+  thumbnail?: string;
 }
 
 const mockEducationItems: EducationItem[] = [
@@ -42,6 +43,7 @@ const mockEducationItems: EducationItem[] = [
     durationOrDate: "6 Weeks · Self-Paced",
     tags: ["Certification", "Bioinformatics"],
     gradient: "from-emerald-600/40 via-cyan-600/30 to-blue-600/40",
+    thumbnail: "/courses/course_genome_analysis.png",
   },
   {
     id: "course-2",
@@ -55,6 +57,7 @@ const mockEducationItems: EducationItem[] = [
     durationOrDate: "3 Days · Hands-On",
     tags: ["Workshop", "Quantum Computing"],
     gradient: "from-purple-600/40 via-indigo-600/30 to-blue-600/40",
+    thumbnail: "/courses/course_quantum_molecular.png",
   },
   {
     id: "course-3",
@@ -68,6 +71,7 @@ const mockEducationItems: EducationItem[] = [
     durationOrDate: "1 Semester · Academic",
     tags: ["Degree Course", "Genetics"],
     gradient: "from-rose-600/40 via-purple-600/30 to-indigo-600/40",
+    thumbnail: "/courses/course_trna_peptides.png",
   },
   {
     id: "course-4",
@@ -81,6 +85,7 @@ const mockEducationItems: EducationItem[] = [
     durationOrDate: "8 Weeks · Advanced",
     tags: ["Certification", "AI / ML"],
     gradient: "from-cyan-600/40 via-teal-600/30 to-emerald-600/40",
+    thumbnail: "/courses/course_alphafold_ai.png",
   },
   {
     id: "course-5",
@@ -94,6 +99,7 @@ const mockEducationItems: EducationItem[] = [
     durationOrDate: "1 Day · Technical",
     tags: ["Workshop", "API Dev"],
     gradient: "from-amber-600/40 via-orange-600/30 to-rose-600/40",
+    thumbnail: "/courses/course_api_integration.png",
   },
 
   // --- Resources ---
@@ -109,6 +115,7 @@ const mockEducationItems: EducationItem[] = [
     durationOrDate: "Published: June 2026",
     tags: ["Whitepaper", "Dark Genome"],
     gradient: "from-teal-600/40 via-cyan-600/30 to-indigo-600/40",
+    thumbnail: "/blog-dark-matter.jpg",
   },
   {
     id: "resource-2",
@@ -122,6 +129,7 @@ const mockEducationItems: EducationItem[] = [
     durationOrDate: "Published: May 2025",
     tags: ["Research", "tREP-18"],
     gradient: "from-pink-600/40 via-purple-600/30 to-indigo-600/40",
+    thumbnail: "/blog-precision-therapeutics.png",
   },
   {
     id: "resource-3",
@@ -135,6 +143,7 @@ const mockEducationItems: EducationItem[] = [
     durationOrDate: "Duration: 45 Mins",
     tags: ["Video", "Quantum Simulation"],
     gradient: "from-indigo-600/40 via-violet-600/30 to-fuchsia-600/40",
+    thumbnail: "/blog-quantum-simulations.png",
   },
   {
     id: "resource-4",
@@ -148,6 +157,7 @@ const mockEducationItems: EducationItem[] = [
     durationOrDate: "Published: March 2026",
     tags: ["Case Study", "BACE1"],
     gradient: "from-blue-600/40 via-emerald-600/30 to-teal-600/40",
+    thumbnail: "/blog-life-sciences.jpg",
   },
 ];
 
@@ -477,21 +487,32 @@ export default function EducationPage() {
                     key={item.id}
                     className="group border border-slate-200/80 dark:border-slate-900 bg-white dark:bg-slate-950/40 rounded-2xl overflow-hidden shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-850 hover:-translate-y-0.5 transition-all duration-300 flex flex-col h-full"
                   >
-                    {/* Thumbnail placeholder */}
+                    {/* Thumbnail Container */}
                     <div className="relative aspect-video w-full overflow-hidden border-b border-slate-100 dark:border-slate-900/80 bg-slate-950">
-                      <div
-                        className={`absolute inset-0 bg-gradient-to-tr ${item.gradient} opacity-85 transition-transform duration-700 group-hover:scale-105`}
-                      />
-                      <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.4)_1px,transparent_1px)] bg-[size:16px_16px]" />
-
-                      {/* Inner symbolic biology motif */}
-                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40 group-hover:opacity-55 transition-opacity">
-                        {item.type === "courses" ? (
-                          <BookOpen className="w-10 h-10 text-white" />
-                        ) : (
-                          <FileText className="w-10 h-10 text-white" />
-                        )}
-                      </div>
+                      {item.thumbnail ? (
+                        <>
+                          <img
+                            src={item.thumbnail}
+                            alt={item.title}
+                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" />
+                        </>
+                      ) : (
+                        <>
+                          <div
+                            className={`absolute inset-0 bg-gradient-to-tr ${item.gradient} opacity-85 transition-transform duration-700 group-hover:scale-105`}
+                          />
+                          <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.4)_1px,transparent_1px)] bg-[size:16px_16px]" />
+                          <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-40 group-hover:opacity-55 transition-opacity">
+                            {item.type === "courses" ? (
+                              <BookOpen className="w-10 h-10 text-white" />
+                            ) : (
+                              <FileText className="w-10 h-10 text-white" />
+                            )}
+                          </div>
+                        </>
+                      )}
 
                       {/* Overlaid Badges */}
                       <div className="absolute top-3.5 left-3.5 flex flex-wrap gap-1.5">
