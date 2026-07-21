@@ -97,16 +97,29 @@ export default function IndustryDetailPage({ slug }: { slug: string }) {
         <h2 className="font-serif-display text-[clamp(1.75rem,3vw,2.5rem)] mt-3">
           Where it applies
         </h2>
-        <div className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(min(100%,220px),1fr))] gap-5">
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
           {i.useCases.map((u) => (
             <div
               key={u.title}
-              className="group p-6 rounded-2xl border border-foreground/10 bg-white/60 dark:bg-white/5 backdrop-blur transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent-blue/30 hover:bg-white/85 dark:hover:bg-white/10"
+              className="group rounded-2xl border border-foreground/10 bg-white/60 dark:bg-white/5 backdrop-blur transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:border-accent-blue/30 hover:bg-white/85 dark:hover:bg-white/10 overflow-hidden flex flex-col"
             >
-              <h3 className="font-semibold text-base transition-colors duration-300 group-hover:text-accent-blue mb-2">
-                {u.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{u.body}</p>
+              {u.img && (
+                <div className="w-full h-48 overflow-hidden border-b border-black/5 dark:border-white/5 relative bg-slate-100 dark:bg-slate-900">
+                  <img
+                    src={u.img}
+                    alt={u.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+              )}
+              <div className="p-6 flex-1 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-semibold text-base transition-colors duration-300 group-hover:text-accent-blue mb-2">
+                    {u.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{u.body}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

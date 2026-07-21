@@ -21,7 +21,7 @@ export type Offering = {
   overview: string;
   features: { title: string; body: string }[];
   benefits: string[];
-  useCases: { title: string; body: string }[];
+  useCases: { title: string; body: string; img?: string }[];
 };
 
 export const offerings: Offering[] = [

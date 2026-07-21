@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { useContactModal } from "@/components/shared/ContactModal";
-import analyticalImg from "./analytical-chemistry-showcase.png";
+import molVideo from "./mol_9x9_1.mp4";
 
 export default function AnalyticalServicesPage() {
   const { open: openContact } = useContactModal();
@@ -180,10 +180,14 @@ export default function AnalyticalServicesPage() {
           <div className="md:col-span-5 flex justify-center w-full">
             <div className="relative w-full rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-white/40 dark:bg-black/20 p-1.5 shadow-xl backdrop-blur-md">
               <div className="absolute inset-0 bg-gradient-to-br from-accent-blue/10 via-transparent to-accent-purple/10 opacity-30 pointer-events-none" />
-              <img
-                src={analyticalImg}
-                alt="Analytical Chemistry Lab Equipment"
+              <video
+                src={molVideo}
+                poster="/precision_others/molecule_glass.png"
                 className="w-full h-auto object-cover rounded-xl border border-black/5 dark:border-white/5 shadow-inner"
+                autoPlay
+                muted
+                loop
+                playsInline
               />
             </div>
           </div>

@@ -23,7 +23,7 @@ export type Industry = {
   subtext: string;
   overview: string;
   highlights: { title: string; body: string; icon: LucideIcon }[];
-  useCases: { title: string; body: string }[];
+  useCases: { title: string; body: string; img?: string }[];
   color: string;
   accent: string;
   workflow: { step: string; title: string; body: string }[];
@@ -137,14 +137,17 @@ export const industries: Industry[] = [
       {
         title: "Specialty Chemicals",
         body: "Custom catalytic peptides for fine-chemical synthesis.",
+        img: "/use-cases/specialty-chemicals.png",
       },
       {
         title: "Food & Agri-Tech",
         body: "Functional proteins and bioactives for next-gen food systems.",
+        img: "/use-cases/food-agri-tech.png",
       },
       {
         title: "Sustainable Materials",
         body: "Biodegradable polymers from engineered protein backbones.",
+        img: "/use-cases/sustainable-materials.png",
       },
     ],
     workflow: [
