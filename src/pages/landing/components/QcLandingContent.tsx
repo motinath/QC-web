@@ -182,9 +182,7 @@ export function QcLandingContent() {
                     {item.icon}
                   </div>
                   <h4 className="font-semibold text-sm mb-2 text-foreground">{item.title}</h4>
-                  <p className="text-xs text-muted-foreground leading-relaxed">
-                    {item.text}
-                  </p>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{item.text}</p>
                 </div>
               </div>
             ))}
