@@ -12,7 +12,7 @@ export default function QcPreloader3D() {
     // Guarantee programmatic video playback on mount
     if (videoRef.current) {
       videoRef.current.muted = true;
-      videoRef.current.play().catch(() => { });
+      videoRef.current.play().catch(() => {});
     }
 
     // Play preloader for 2.0 seconds (0s - 2.0s)
@@ -44,16 +44,18 @@ export default function QcPreloader3D() {
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden select-none pointer-events-auto touch-none overscroll-none transition-all duration-1000 ease-in-out ${phase === "zooming"
-        ? "opacity-0 pointer-events-none scale-125 blur-sm"
-        : "opacity-100 scale-100 blur-none"
-        }`}
+      className={`fixed inset-0 z-[9999] flex items-center justify-center overflow-hidden select-none pointer-events-auto touch-none overscroll-none transition-all duration-1000 ease-in-out ${
+        phase === "zooming"
+          ? "opacity-0 pointer-events-none scale-125 blur-sm"
+          : "opacity-100 scale-100 blur-none"
+      }`}
       style={{ background: "#050608" }}
     >
       {/* Background Video (/d.mp4) Fitted cleanly with camera zoom transition */}
       <div
-        className={`absolute inset-0 flex items-center justify-center w-full h-full transition-all duration-1000 ease-in-out transform-gpu ${phase === "zooming" ? "scale-150 opacity-0" : "scale-100 opacity-100"
-          }`}
+        className={`absolute inset-0 flex items-center justify-center w-full h-full transition-all duration-1000 ease-in-out transform-gpu ${
+          phase === "zooming" ? "scale-150 opacity-0" : "scale-100 opacity-100"
+        }`}
       >
         <video
           ref={videoRef}
@@ -71,10 +73,11 @@ export default function QcPreloader3D() {
 
       {/* Cinematic Center Title */}
       <div
-        className={`relative z-20 text-center px-6 transition-all duration-1000 ease-in-out transform-gpu ${phase === "zooming"
-          ? "scale-135 opacity-0 -translate-y-4"
-          : "scale-100 opacity-100 translate-y-0"
-          }`}
+        className={`relative z-20 text-center px-6 transition-all duration-1000 ease-in-out transform-gpu ${
+          phase === "zooming"
+            ? "scale-135 opacity-0 -translate-y-4"
+            : "scale-100 opacity-100 translate-y-0"
+        }`}
       >
         <h1 className="font-serif-display text-5xl md:text-7xl font-normal tracking-tight text-white animate-title-glow">
           Quantum Codon
