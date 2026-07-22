@@ -31,7 +31,7 @@ import {
 import { useContactModal } from "../../../components/shared/ContactModal";
 import facilityImg from "./work-reg.png";
 import biotechImg from "./molecule.jpeg";
-import _biomanufacturingImg from "../bio-mmg/bioprocess-control-bioreactor.jpg";
+import _biomanufacturingImg from "../bio-mfg/bioprocess-control-bioreactor.jpg";
 import bioaiImg from "./brainr.jpeg";
 import bioRegImg from "./bio-regulatory-compliance.png";
 import _analyticalImg from "./analytical-chemistry.jpg";

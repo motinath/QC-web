@@ -46,11 +46,12 @@ const KB_FALLBACK: Array<{ patterns: string[]; answer: string }> = [
       "services",
       "what do you offer",
       "analytical",
+      "bio mfg",
       "bio mmg",
       "bioinformatics",
       "regulatory",
     ],
-    answer: `Quantum Codon offers **5 enterprise services**:\n1. 💊 [Drug Discovery](/services#drug-discovery)\n2. 🧫 [Bio MMG (Microbiology & Molecular Genetics)](/services#bio-mmg)\n3. 🔬 [Analytical Services](/services#analytical-services)\n4. 🖥️ [Bio Infactic (Bioinformatics)](/services#bio-infactic)\n5. 📋 [Regulatory & Complaints](/services#regulatory-complaints)`,
+    answer: `Quantum Codon offers **5 enterprise services**:\n1. 💊 [Drug Discovery](/services#drug-discovery)\n2. 🧫 [Bio MFG (Biomanufacturing & Bioprocess)](/services#bio-mfg)\n3. 🔬 [Analytical Services](/services#analytical-services)\n4. 🖥️ [Bio Infactic (Bioinformatics)](/services#bio-infactic)\n5. 📋 [Regulatory & Complaints](/services#regulatory-complaints)`,
   },
   {
     patterns: ["class i", "class 1", "non-expressing", "intergenic", "antisense", "pseudogene"],
@@ -270,8 +271,8 @@ const ROUTE_STARTERS: Record<string, { label: string; query: string }[]> = {
       query: "Where do I find details on the drug discovery services?",
     },
     {
-      label: "🧫 Bio MMG Cloning Vector services",
-      query: "Tell me about Bio MMG microbiology genetic engineering services",
+      label: "🧫 Bio MFG Biomanufacturing services",
+      query: "Tell me about Bio MFG biomanufacturing and fermentation services",
     },
     {
       label: "🖥️ Bioinformatics & AlphaFold APIs",

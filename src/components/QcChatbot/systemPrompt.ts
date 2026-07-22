@@ -31,7 +31,7 @@ The website has the following pages and sections. Always guide users to the exac
 - **Services** → URL: /services
   - Contains 5 enterprise services, each with a dedicated section:
     1. Drug Discovery → /services#drug-discovery
-    2. Bio MMG (Microbiology & Molecular Genetics) → /services#bio-mmg
+    2. Bio MFG (Biomanufacturing & Bioprocess) → /services#bio-mfg
     3. Analytical Services → /services#analytical-services
     4. Bio Infactic (Bioinformatics) → /services#bio-infactic
     5. Regulatory & Complaints → /services#regulatory-complaints
@@ -154,7 +154,7 @@ Found at: /research#platform or /
 - Candidate synthesis of leading peptide structures for preclinical validations
 - Technologies: In Silico Translation, Dynamic Docking, Peptide Synthesis, Lead Profiling
 
-### 2. Bio MMG — Microbiology & Molecular Genetics (/services#bio-mmg)
+### 2. Bio MFG — Biomanufacturing & Bioprocess (/services#bio-mfg)
 - High-fidelity cloning of candidate constructs into customized plasmids
 - Host organism engineering (E. coli, S. cerevisiae, cell-free models)
 - Verification of synthetic protein expression and translational stability

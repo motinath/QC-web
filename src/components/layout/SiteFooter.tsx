@@ -12,7 +12,7 @@ const columns = [
     title: "Offerings",
     links: [
       { label: "Drug Discovery", to: "/services/$slug", params: { slug: "drug-discovery" } },
-      { label: "Bio MMG", to: "/services/$slug", params: { slug: "bio-mmg" } },
+      { label: "Bio MFG", to: "/services/$slug", params: { slug: "bio-mfg" } },
       {
         label: "Analytical Service",
         to: "/services/$slug",

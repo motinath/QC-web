@@ -15,7 +15,7 @@ import { Card } from "@/components/ui/card";
 import bioprocessControlImg from "./bioprocess-control-bioreactor.jpg";
 import probioticsProcessImg from "./probiotics-production-process.jpg";
 
-export default function BioMmgPage() {
+export default function BioMfgPage() {
   return (
     <PageShell spotlight="from-accent-purple/15 via-transparent to-transparent">
       {/* 1. Hero Section */}
@@ -29,7 +29,7 @@ export default function BioMmgPage() {
                   <Dna className="h-6 w-6 text-accent-purple" />
                 </div>
                 <span className="font-mono text-xs tracking-[0.2em] uppercase text-accent-purple font-semibold">
-                  Offering 02 — Bio MMG
+                  Offering 02 — Bio MFG
                 </span>
               </div>
               <h1 className="font-serif-display text-4xl md:text-5xl lg:text-6xl leading-[1.12] text-foreground font-semibold">

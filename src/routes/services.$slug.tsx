@@ -3,7 +3,7 @@ import { getOffering, offerings } from "@/lib/services-data";
 import EducationPage from "@/pages/services/education/Education";
 import DrugDiscoveryPage from "@/pages/services/drug-discovery/DrugDiscovery";
 import AnalyticalServicesPage from "@/pages/services/analytical-services/AnalyticalServices";
-import BioMmgPage from "@/pages/services/bio-mmg/BioMmg";
+import BioMfgPage from "@/pages/services/bio-mfg/BioMfg";
 import BioinformaticsPage from "@/pages/services/bioinformatics/Bioinformatics";
 
 export const Route = createFileRoute("/services/$slug")({
@@ -64,8 +64,8 @@ function ServiceDetailPage() {
   if (o.slug === "analytical-service" || o.slug === "analytical-services") {
     return <AnalyticalServicesPage />;
   }
-  if (o.slug === "bio-mmg") {
-    return <BioMmgPage />;
+  if (o.slug === "bio-mfg" || o.slug === "bio-mmg") {
+    return <BioMfgPage />;
   }
 
   if (o.slug === "bioinformatics") {

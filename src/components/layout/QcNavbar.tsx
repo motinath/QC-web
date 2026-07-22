@@ -19,7 +19,7 @@ import { useContactModal } from "../shared/ContactModal";
 
 const _OFFERING_ANCHORS: Record<string, string> = {
   "drug-discovery": "/#drug-discovery",
-  "bio-mmg": "/#bio-mmg",
+  "bio-mfg": "/#bio-mfg",
   "analytical-service": "/#analytical-services",
   bioinformatics: "/#bioinformatics",
   "regulatory-compliance": "/services/regulatory-compliance",
