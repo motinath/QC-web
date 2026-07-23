@@ -78,7 +78,8 @@ export const offerings: Offering[] = [
   {
     slug: "bio-mfg",
     title: "Bio MFG",
-    description: "Advanced molecular modeling, biomanufacturing, and computational biology solutions.",
+    description:
+      "Advanced molecular modeling, biomanufacturing, and computational biology solutions.",
     icon: Dna,
     badge: "Wet-Lab Core",
     num: "02",

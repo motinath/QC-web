@@ -54,20 +54,24 @@ src/
 ## Quickstart Guide
 
 ### Prerequisites
+
 - Node.js >= 20.x
 - npm >= 10.x
 
 ### Installation
+
 ```bash
 npm install
 ```
 
 ### Development Server
+
 ```bash
 npm run dev
 ```
 
 ### Quality Assurance Checks
+
 ```bash
 # Run ESLint rules
 npm run lint

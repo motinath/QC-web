@@ -47,7 +47,7 @@ const KB_FALLBACK: Array<{ patterns: string[]; answer: string }> = [
       "what do you offer",
       "analytical",
       "bio mfg",
-      "bio mmg",
+      "bio mfg",
       "bioinformatics",
       "regulatory",
     ],
